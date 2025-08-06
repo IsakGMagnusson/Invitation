@@ -1,5 +1,5 @@
 const InfoPage = () => {
-  return <div>Info</div>;
+  return <h2>Info</h2>;
 };
 
 export default InfoPage;
