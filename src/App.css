@@ -28,6 +28,29 @@
   color: #61dafb;
 }
 
+.HeaderBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header {
+  align-self: center;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+}
+
+.MenuButton {
+  flex: 1;
+
+  background-color: bisque;
+  font-size: xx-large;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
