@@ -5,6 +5,7 @@ import ContactPage from "./organisms/ContactPage";
 import NoticePage from "./organisms/NoticePage";
 import WelcomePage from "./organisms/WelcomePage";
 import WishListPage from "./organisms/WishListPage";
+const splashImg = require("../assets/epicflowerimage.png");
 
 const MainPage = () => {
   const { page, setPageValue } = useSelectedPage();
@@ -19,11 +20,12 @@ const MainPage = () => {
 
   return (
     <div className="MainPage">
-      <div className="startText">
-        <h1>Välkommen på bröllop: x & y edition</h1>
-      </div>
-      <div className="HeaderBox">
-        <Header setPageValue={setPageValue} />
+      <div className="flower-and-header">
+        <img src={splashImg} className="img-flower" />
+
+        <div className="HeaderBox">
+          <Header setPageValue={setPageValue} />
+        </div>
       </div>
 
       <div className="PageBox">{selectPage(page)}</div>
