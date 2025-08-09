@@ -3,6 +3,7 @@ type ButtonProps = {
   onClick: (val: number) => void;
   type?: "button";
   pageValue: number;
+  page: number;
 };
 
 const Button = ({
@@ -10,12 +11,13 @@ const Button = ({
   onClick,
   type = "button",
   pageValue,
+  page,
 }: ButtonProps) => {
   return (
     <button
       onClick={() => onClick(pageValue)}
       type={type}
-      className="MenuButton"
+      className={pageValue === page ? "MenuButton-selected" : "MenuButton"}
     >
       {label}
     </button>

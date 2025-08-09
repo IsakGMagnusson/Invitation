@@ -53,6 +53,7 @@
   align-items: center;
   justify-content: center;
   align-self: center;
+  margin-top: 3%;
 }
 
 .Header {
@@ -77,6 +78,7 @@
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
+  margin-top: 10%;
 }
 
 .MainPage {
@@ -146,9 +148,18 @@
 .MenuButton {
   flex: 1;
   background-color: #ffffff;
-  font-size: x-large;
-  font-family: "serif";
+  font-size: medium;
+  font-family: serif;
   border-width: 0px;
+}
+
+.MenuButton-selected {
+  flex: 1;
+  background-color: #ffffff;
+  font-size: medium;
+  font-family: serif;
+  border-width: 0px;
+  font-weight: bolder;
 }
 
 .MenuButton:hover {
@@ -157,6 +168,6 @@
 }
 
 .welcome-page {
-  width: 80%;
+  width: 50%;
   height: 60%;
 }
