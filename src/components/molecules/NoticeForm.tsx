@@ -49,41 +49,60 @@ const NoticeForm = () => {
     }
   };
 
+  const todo = () => {
+    alert("todo: fixa funktionalitet");
+  };
+
   const [isComing, setIsComing] = useState("");
 
   return (
-    <form onSubmit={handlePost} className="notice-form">
+    <form className="notice-form" onSubmit={handlePost}>
       <div className="form-section">
         <FormHeader text="Namn" />
         <FormTextInput name="name" />
       </div>
       <div className="form-section">
         <div className="form-radiobuttons-section">
-          <FormHeader text="Kommer du dyka upp?" />
+          <FormHeader text="Kommer du?" />
           <div className="radiobuttons-box">
             <FormRadioButtons
-              label="Ja, klart man får ställa upp"
+              label="Ja, såklart!"
               value="yes"
               setIsComing={setIsComing}
             />
           </div>
           <div className="radiobuttons-box">
             <FormRadioButtons
-              label="Nei, vil ikke"
+              label="Nej, tyvärr!"
               value="no"
               setIsComing={setIsComing}
             />
           </div>
         </div>
       </div>
+      {isComing === "yes" && (
+        <>
+          <div className="form-section">
+            <FormHeader text="Ange eventuella allergier och specialkost, skriv nej om du inte har några" />
+            <FormTextArea name="allergies" />
+          </div>
 
-      <div className="form-section">
-        <FormHeader text="Allergier / matavvikelser - lämna blank om inga" />
+          <div className="form-section">
+            <FormHeader text="En låt jag absolut inte kan sitta still till…" />
+            <FormTextArea name="song" />
+          </div>
 
-        <FormTextArea name="allergies" />
-      </div>
+          <div className="form-section">
+            <FormHeader text="Jag kommer ta bil och vill ta med mig fler bröllopsgäster eller skulle vilja samåka med någon som har bil." />
+            <FormTextArea name="transport" />
+          </div>
 
-      <button>Svara</button>
+          <button type="button" onClick={todo}>
+            +Lägg till person
+          </button>
+        </>
+      )}
+      <button type="submit">Svara</button>
     </form>
   );
 };

@@ -10,7 +10,6 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header1}</h3>
-          <br />
           <p>{text.text1}</p>
         </div>
       </div>
@@ -20,7 +19,6 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header2}</h3>
-          <br />
           <p>{text.text2}</p>
         </div>
       </div>
@@ -30,9 +28,7 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header3}</h3>
-          <br />
           <p>{text.text3}</p>
-          <br />
           <p>{text.text4}</p>
         </div>
       </div>
@@ -42,9 +38,7 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header4}</h3>
-          <br />
           <p>{text.text5}</p>
-          <br />
           <p>{text.text6}</p>
         </div>
       </div>
@@ -54,7 +48,6 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header5}</h3>
-          <br />
           <p>{text.text7}</p>
         </div>
       </div>
@@ -64,7 +57,6 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header6}</h3>
-          <br />
           <p>{text.text8}</p>
         </div>
       </div>
@@ -74,9 +66,7 @@ const InfoPage = () => {
         <></>
         <div className="weddingday-text">
           <h3>{text.header7}</h3>
-          <br />
           <p>{text.text9}</p>
-          <br />
           <p>{text.text10}</p>
         </div>
       </div>

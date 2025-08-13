@@ -12,7 +12,6 @@ const WeddingdayPage = () => {
         <img className="weddingday-image" src={fikabild} />
         <div className="weddingday-text">
           <h3>{text.header1}</h3>
-          <br />
           <p>{text.text1}</p>
         </div>
       </div>
@@ -22,7 +21,6 @@ const WeddingdayPage = () => {
         <img className="weddingday-image" src={vigselbild} />
         <div className="weddingday-text">
           <h3>{text.header2}</h3>
-          <br />
           <p>{text.text2}</p>
         </div>
       </div>
@@ -32,7 +30,6 @@ const WeddingdayPage = () => {
         <img className="weddingday-image" src={fikabild} />
         <div className="weddingday-text">
           <h3>{text.header3}</h3>
-          <br />
           <p>{text.text3}</p>
         </div>
       </div>
@@ -42,9 +39,7 @@ const WeddingdayPage = () => {
         <img className="weddingday-image" src={fikabild} />
         <div className="weddingday-text">
           <h3>{text.header4}</h3>
-          <br />
           <p>{text.text5}</p>
-          <br />
           <p>{text.text6}</p>
         </div>
       </div>
@@ -54,8 +49,6 @@ const WeddingdayPage = () => {
         <img className="weddingday-image" src={fikabild} />
         <div className="weddingday-text">
           <h3>{text.header5}</h3>
-          <br />
-
           <p>{text.text7}</p>
         </div>
       </div>
