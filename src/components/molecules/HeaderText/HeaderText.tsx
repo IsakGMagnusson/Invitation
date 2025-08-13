@@ -4,8 +4,11 @@ const HeaderText = () => {
   return (
     <div className="startText">
       <div className="startText">
-        <p className="header-line1">{text.welcome}</p>
-        <p className="header-line2">{text.date}</p>
+        <p className="headertext-welcome">{text.welcome}</p>
+        <br />
+        <p className="headertext-name">{text.name}</p>
+        <br />
+        <p className="headertext-date">{text.date}</p>
       </div>
     </div>
   );

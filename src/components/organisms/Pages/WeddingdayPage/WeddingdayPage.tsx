@@ -1,25 +1,65 @@
+import WeddingdayLine from "../../../atoms/WeddingdayLine";
 import text from "./text.json";
+const fikabild = require("../../../../assets/fikabild.jpg");
+const vigselbild = require("../../../../assets/vigselbild.jpg");
 
 const WeddingdayPage = () => {
   return (
-    <div className="welcome-page">
+    <div className="weddingday-page">
       <h1>{text.header}</h1>
-      <h1>{text.header1}</h1>
-      <h2>{text.text1}</h2>
-      <h1>{text.header2}</h1>
 
-      <h2>{text.text2}</h2>
-      <h1>{text.header3}</h1>
+      <div className="weddingday-section">
+        <img className="weddingday-image" src={fikabild} />
+        <div className="weddingday-text">
+          <h3>{text.header1}</h3>
+          <br />
+          <p>{text.text1}</p>
+        </div>
+      </div>
+      <WeddingdayLine />
 
-      <h2>{text.text3}</h2>
-      <h2>{text.text4}</h2>
-      <h1>{text.header4}</h1>
+      <div className="weddingday-section">
+        <img className="weddingday-image" src={vigselbild} />
+        <div className="weddingday-text">
+          <h3>{text.header2}</h3>
+          <br />
+          <p>{text.text2}</p>
+        </div>
+      </div>
+      <WeddingdayLine />
 
-      <h2>{text.text5}</h2>
-      <h2>{text.text6}</h2>
-      <h1>{text.header5}</h1>
+      <div className="weddingday-section">
+        <img className="weddingday-image" src={fikabild} />
+        <div className="weddingday-text">
+          <h3>{text.header3}</h3>
+          <br />
+          <p>{text.text3}</p>
+        </div>
+      </div>
+      <WeddingdayLine />
 
-      <h2>{text.text7}</h2>
+      <div className="weddingday-section">
+        <img className="weddingday-image" src={fikabild} />
+        <div className="weddingday-text">
+          <h3>{text.header4}</h3>
+          <br />
+          <p>{text.text5}</p>
+          <br />
+          <p>{text.text6}</p>
+        </div>
+      </div>
+      <WeddingdayLine />
+
+      <div className="weddingday-section">
+        <img className="weddingday-image" src={fikabild} />
+        <div className="weddingday-text">
+          <h3>{text.header5}</h3>
+          <br />
+
+          <p>{text.text7}</p>
+        </div>
+      </div>
+      <WeddingdayLine />
     </div>
   );
 };

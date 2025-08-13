@@ -1,39 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 
-.header-line1 {
-  font-family: "Just Me Again Down Here";
-  font-size: 3rem;
-  line-height: 0px;
+@font-face {
+  font-family: "MALGUN";
+  src: local("MALGUN"), url("./assets/fonts/MALGUNSL.TTF") format("opentype");
 }
 
-.header-line2 {
-  font-family: "Just Me Again Down Here";
-  font-weight: bolder;
-  font-size: 4rem;
-  line-height: 0px;
-}
-
-.header-line3 {
-  font-family: "Just Me Again Down Here";
+.headertext-welcome {
+  font-family: "Pinyon Script", cursive;
+  font-weight: normal;
   font-size: 2rem;
-  line-height: 0px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.headertext-name {
+  font-weight: normal;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.headertext-date {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .App {
   text-align: center;
   width: 100%;
   height: 100%;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .flower-and-header {
@@ -49,6 +49,7 @@
 
 .HeaderBox {
   display: flex;
+  background-color: #f5ece5;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -57,7 +58,7 @@
 }
 
 .Header {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -65,26 +66,36 @@
 .HeaderButtons {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
   align-items: center;
   justify-content: center;
   align-self: center;
 }
 
-.Line {
+.header-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid #ccc;
+  margin: 1em 0;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.weddingday-line {
   display: block;
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
-  padding: 0;
-  margin-top: 10%;
+  width: 100%;
 }
 
 .MainPage {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-color: #f5ece5;
 }
 
 .PageBox {
@@ -93,6 +104,7 @@
   align-self: center;
   justify-content: center;
   align-items: center;
+  background-color: #f5ece5;
 }
 
 .flip-card {
@@ -147,27 +159,162 @@
 
 .MenuButton {
   flex: 1;
-  background-color: #ffffff;
   font-size: medium;
-  font-family: serif;
   border-width: 0px;
+  background-color: #f5ece5;
+  font-family: "MALGUN";
 }
 
 .MenuButton-selected {
   flex: 1;
-  background-color: #ffffff;
+  background-color: #f5ece5;
   font-size: medium;
-  font-family: serif;
   border-width: 0px;
   font-weight: bolder;
+  font-family: "MALGUN";
 }
 
 .MenuButton:hover {
-  background-color: #f5f5f5;
+  background-color: #efe3db; /*#e7d9ce;  https://meyerweb.com/eric/tools/color-blend/#F5ECE5:E7D9CE:10:hex*/
   cursor: pointer;
 }
 
 .welcome-page {
   width: 50%;
   height: 60%;
+}
+
+.notice-form {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-items: center;
+  width: 40%;
+  background-color: #f7e7db;
+}
+
+.form-section {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  margin-bottom: 1rem;
+  align-items: flex-start;
+  width: 90%;
+  background-color: #fdf4ed;
+}
+
+.form-textinput {
+  margin-left: 1rem;
+
+  margin-bottom: 1rem;
+
+  line-height: 30px;
+  font-size: large;
+  width: 90%;
+}
+
+.InputWithLabel {
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: flex-start;
+  font-weight: bold;
+}
+
+.form-header {
+  font-weight: bold;
+  font-size: medium;
+  line-height: 1.2;
+  padding-left: 1rem;
+}
+
+.form-radiobuttons-section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.radiobuttons-box {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  border-bottom: none;
+  width: 100%;
+}
+
+.form-radiobuttons {
+  margin: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-textarea {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: large;
+
+  width: 90%;
+  height: 100px;
+  resize: none;
+}
+
+.weddingday-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 60%;
+}
+
+.weddingday-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  text-align: left;
+}
+
+.weddingday-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.weddingday-image {
+  display: flex;
+  margin-right: 1rem;
+  height: 100%;
+  margin-top: 0px;
+  padding: 0px;
+  height: 130px;
+}
+
+.weddingday-section h3 {
+  font-weight: BOLD;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "MALGUN";
+}
+
+.weddingday-section p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "MALGUN";
 }

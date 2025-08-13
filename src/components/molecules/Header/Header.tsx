@@ -1,3 +1,4 @@
+import HeaderLine from "../../atoms/HeaderLine";
 import MenuButton from "../../atoms/MenuButton";
 import HeaderText from "../HeaderText/HeaderText";
 import text from "./text.json";
@@ -11,7 +12,7 @@ const Header = ({ setPageValue, page }: HeaderProps) => {
   return (
     <div className="Header">
       <HeaderText />
-      <div className="Line"></div>
+      <HeaderLine />
       <div className="HeaderButtons">
         <MenuButton
           label={text.welcome}
