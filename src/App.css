@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   line-height: 1;
+  margin-top: 3%;
 }
 
 .headertext-name {
@@ -79,7 +80,7 @@
   border-top: 3px solid #ccc;
   margin: 1em 0;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .weddingday-line {
@@ -87,7 +88,7 @@
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1em 0;
+  margin: 3em 0;
   width: 100%;
 }
 
@@ -105,6 +106,12 @@
   justify-content: center;
   align-items: center;
   background-color: #f5ece5;
+}
+
+.page-top-header {
+  font-family: "Pinyon Script";
+  font-weight: normal;
+  font-size: 2.5rem;
 }
 
 .flip-card {
@@ -184,6 +191,15 @@
   height: 60%;
 }
 
+.notice-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 60%;
+}
+
 .notice-form {
   border-width: 3px;
   border-style: solid;
@@ -192,7 +208,7 @@
   flex-direction: column;
   margin-bottom: 1rem;
   align-items: center;
-  width: 40%;
+  width: 60%;
   background-color: #f7e7db;
 }
 
@@ -301,10 +317,10 @@
   height: 100%;
   margin-top: 0px;
   padding: 0px;
-  height: 130px;
+  height: 150px;
 }
 
-.weddingday-section h3 {
+.standard-header {
   font-weight: BOLD;
   margin: 0;
   padding: 0;
@@ -313,8 +329,238 @@
   margin-bottom: 0.8em;
 }
 
-.weddingday-section p {
+.standard-text {
+  margin-bottom: 0;
+  padding: 0;
+  font-family: "MALGUN";
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.link-button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+
   margin: 0;
   padding: 0;
   font-family: "MALGUN";
+
+  font-size: medium;
+}
+
+.countdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5ece5;
+  padding-top: 5%;
+}
+
+.timer-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #ccc;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+.countdown .content {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+  background-color: #f5ece5;
+  margin-bottom: 3%;
+}
+.countdown h2 {
+  font-size: xx-large;
+  margin: 0;
+  font-family: "MALGUN";
+  background-color: #f5ece5;
+}
+
+.countdown .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 150px;
+  background-color: #f5ece5;
+}
+
+.countdown .value {
+  margin: 0;
+  padding: 0;
+  font-family: "MALGUN";
+  font-size: xx-large;
+}
+
+.countdown .label {
+  margin: 0;
+  padding: 0;
+  font-family: "MALGUN";
+  font-size: large;
+}
+
+.timeline {
+  width: 50%;
+  margin: 20px auto;
+  position: relative;
+}
+.timeline:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0 0 0 -1px;
+  width: 2px;
+  height: 100%;
+  background: rgba(185, 0, 0, 0.2);
+}
+.timeline .timeline-item {
+  width: 100%;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.timeline .timeline-item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.timeline .timeline-item .inner {
+  width: 40%;
+  float: left;
+  margin: 5px 0 0 0;
+  border-radius: 6px;
+}
+.timeline .timeline-item .inner .date {
+  display: block;
+  /* width: 60px; */
+  /*  height: 50px;*/
+  height: 15px;
+  width: 25px;
+
+  padding: 5px 0;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  /*margin: 0 0 0 -32px;*/
+  margin: 5px 0 0 -15px;
+  border-radius: 100%;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #25303b;
+  color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 7px #25303b;
+}
+.timeline .timeline-item .inner .date {
+  display: block;
+  text-align: center;
+}
+
+.timeline .timeline-item .inner .date .month {
+  font-size: 18px;
+}
+.timeline .timeline-item .inner .date .year {
+  font-size: 10px;
+}
+.timeline .timeline-item .inner h2 {
+  padding: 15px;
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+.timeline .timeline-item .inner h2:after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  scale: 3;
+
+  -webkit-transform: rotate(-45deg);
+}
+.timeline .timeline-item .inner p {
+  padding: 15px;
+  margin: 0;
+  background: #f5ece5;
+  color: #656565;
+  border-radius: 0 0 6px 6px;
+  border: 1px solid rgb(192, 111, 34);
+}
+
+.timeline .timeline-item:nth-child(2n + 2) .inner {
+  float: right;
+}
+.timeline .timeline-item:nth-child(2n + 2) .inner h2:after {
+  left: -5px;
+}
+
+.timeline .timeline-item:nth-child(1) .inner h2 {
+  background: #e74c3c;
+}
+.timeline .timeline-item:nth-child(1) .inner h2:after {
+  background: #e74c3c;
+}
+.timeline .timeline-item:nth-child(2) .inner h2 {
+  background: #2ecc71;
+}
+.timeline .timeline-item:nth-child(2) .inner h2:after {
+  background: #2ecc71;
+}
+.timeline .timeline-item:nth-child(3) .inner h2 {
+  background: #e67e22;
+}
+.timeline .timeline-item:nth-child(3) .inner h2:after {
+  background: #e67e22;
+}
+.timeline .timeline-item:nth-child(4) .inner h2 {
+  background: #1abc9c;
+}
+.timeline .timeline-item:nth-child(4) .inner h2:after {
+  background: #1abc9c;
+}
+.timeline .timeline-item:nth-child(5) .inner h2 {
+  background: #9b59b6;
+}
+.timeline .timeline-item:nth-child(5) .inner h2:after {
+  background: #9b59b6;
+}
+
+.timeline .timeline-item:nth-child(6) .inner h2 {
+  background: #a2b659;
+}
+.timeline .timeline-item:nth-child(6) .inner h2:after {
+  background: #a2b659;
+}
+
+.timeline .timeline-item:nth-child(7) .inner h2 {
+  background: #e74c3c;
+}
+.timeline .timeline-item:nth-child(7) .inner h2:after {
+  background: #e74c3c;
+}
+
+.timeline-image {
+  width: 100%;
+  height: auto;
 }

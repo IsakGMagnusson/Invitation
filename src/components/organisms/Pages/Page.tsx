@@ -9,12 +9,13 @@ import AboutToastMasterPage from "./AboutToastMasterPage/AboutToastMasterPage";
 
 type PageProps = {
   page: number;
+  setPageValue: (pageValue: number) => void;
 };
-const Page = ({ page }: PageProps) => {
+const Page = ({ page, setPageValue }: PageProps) => {
   function selectPage(page: number) {
-    if (page === 0) return <WelcomePage />;
-    else if (page === 1) return <WeddingdayPage />;
-    else if (page === 2) return <InfoPage />;
+    if (page === 0) return <WelcomePage setPageValue={setPageValue} />;
+    else if (page === 1) return <WeddingdayPage setPageValue={setPageValue} />;
+    else if (page === 2) return <InfoPage setPageValue={setPageValue} />;
     else if (page === 3) return <AboutUsPage />;
     else if (page === 4) return <SitePage />;
     else if (page === 5) return <NoticePage />;

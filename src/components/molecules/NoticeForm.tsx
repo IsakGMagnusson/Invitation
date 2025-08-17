@@ -5,19 +5,26 @@ import FormTextArea from "../atoms/Form/FormTextArea";
 import FormTextInput from "../atoms/Form/FormTextInput";
 
 const NoticeForm = () => {
+  interface acceptance {
+    name: string;
+    isComing: string;
+    sent: string;
+    allergies: string;
+    song: string;
+    transport: string;
+  }
   const handlePost = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const target = event.target as typeof event.target & {
       name: { value: string };
+      isComing: { value: string };
+      allergies: { value: string };
+      song: { value: string };
+      transport: { value: string };
     };
     const date = new Date();
-    const inputValue: { [key: string]: string } = {
-      name: target.name.value,
-      isComing: isComing,
-      sent: date.toLocaleString(),
-    };
-    console.log(inputValue);
-    if (inputValue.name === "" || inputValue.isComing === "") {
+
+    if (target.name.value === "" || isComing === "") {
       alert("Ge all info");
       return;
     }
@@ -25,27 +32,77 @@ const NoticeForm = () => {
       "AKfycbx5auii34v2lN8FNR6jKHvBpb4d7rvXJedc9T9pOCTiTnoI9btDUzHE_zte6t2iD-aC";
     const baseURL = `https://script.google.com/macros/s/${APP_ID}/exec`;
     const formData = new FormData();
-    Object.keys(inputValue).forEach((key) => {
-      formData.append(key, inputValue[key]);
-    });
 
-    try {
-      const res = await fetch(baseURL, {
-        method: "POST",
-        body: formData,
-      });
-      if (res.ok) {
-        alert("Worked");
+    if (isComing === "no") {
+      try {
+        const inputValue: acceptance = {
+          name: target.name.value,
+          isComing: isComing,
+          allergies: "-",
+          song: "-",
+          transport: "-",
+          sent: date.toLocaleString(),
+        };
+        Object.keys(inputValue).forEach((key) => {
+          formData.append(key, inputValue[key as keyof acceptance]);
+        });
+        const res = await fetch(baseURL, {
+          method: "POST",
+          body: formData,
+        });
+        if (res.ok) {
+          alert("Worked no");
 
-        console.log("Request was successful:", res);
-      } else {
+          console.log("Request was successful:", res);
+        } else {
+          alert("Failed");
+          console.log("Request Failed:", res);
+        }
+      } catch (e) {
         alert("Failed");
-        console.log("Request Failed:", res);
-      }
-    } catch (e) {
-      alert("Failed");
 
-      console.error("Error during fetch:", e);
+        console.error("Error during fetch:", e);
+      }
+    }
+    if (isComing === "yes") {
+      if (
+        target.allergies.value === "" ||
+        target.song.value === "" ||
+        target.transport.value === ""
+      ) {
+        alert("Ge all info");
+        return;
+      }
+      const inputValue: acceptance = {
+        name: target.name.value,
+        isComing: isComing,
+        allergies: target.allergies.value,
+        song: target.song.value,
+        transport: target.transport.value,
+        sent: date.toLocaleString(),
+      };
+      Object.keys(inputValue).forEach((key) => {
+        formData.append(key, inputValue[key as keyof acceptance]);
+      });
+
+      try {
+        const res = await fetch(baseURL, {
+          method: "POST",
+          body: formData,
+        });
+        if (res.ok) {
+          alert("Worked yes");
+
+          console.log("Request was successful:", res);
+        } else {
+          alert("Failed");
+          console.log("Request Failed:", res);
+        }
+      } catch (e) {
+        alert("Failed");
+
+        console.error("Error during fetch:", e);
+      }
     }
   };
 

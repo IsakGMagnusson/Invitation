@@ -1,7 +1,8 @@
 import useSelectedPage from "../hooks/useSelectedPage";
+import Countdown from "./molecules/CountDown";
 import Header from "./molecules/Header/Header";
 import Page from "./organisms/Pages/Page";
-const splashImg = require("../assets/epicflowerimage.png");
+const splashImg = require("../assets/pictures/epicflowerimage.png");
 
 const MainPage = () => {
   const { page, setPageValue } = useSelectedPage();
@@ -15,7 +16,9 @@ const MainPage = () => {
           <Header setPageValue={setPageValue} page={page} />
         </div>
       </div>
-      <Page page={page} />
+      <Page page={page} setPageValue={setPageValue} />
+
+      <Countdown />
     </div>
   );
 };

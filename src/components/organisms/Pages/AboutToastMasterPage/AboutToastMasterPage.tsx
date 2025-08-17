@@ -3,14 +3,14 @@ import text from "./text.json";
 const AboutToastMasterPage = () => {
   return (
     <div className="welcome-page">
-      <h1>{text.header}</h1>
-      <p>{text.text1}</p>
-      <p>{text.text2}</p>
+      <h1 className="page-top-header">{text.header}</h1>
+      <p className="standard-text">{text.text1}</p>
+      <p className="standard-text">{text.text2}</p>
 
-      <h2>{text.toastmasterheader}</h2>
-      <p>{text.toastmasterinfo1}</p>
-      <h2>{text.toastmadameheader}</h2>
-      <p>{text.toastmadameinfo1}</p>
+      <h3 className="standard-header">{text.toastmasterheader}</h3>
+      <p className="standard-text">{text.toastmasterinfo1}</p>
+      <h3 className="standard-header">{text.toastmadameheader}</h3>
+      <p className="standard-text">{text.toastmadameinfo1}</p>
     </div>
   );
 };
