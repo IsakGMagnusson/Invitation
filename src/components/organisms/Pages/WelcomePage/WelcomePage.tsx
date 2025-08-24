@@ -1,7 +1,7 @@
 import FakeLinkButton from "../../../atoms/FakeLinkButton";
 import text from "./text.json";
 
-const splashImg = require("../../../../assets/pictures/coolhalopicture.jpg");
+const splashImg = require("../../../../assets/pictures/frontpage.jpg");
 
 type WelcomePageProps = {
   setPageValue: (pageValue: number) => void;

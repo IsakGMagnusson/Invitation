@@ -7,10 +7,7 @@ type TimelineItemProps = {
 const TimelineItem = ({ text, header, imagePath }: any) => (
   <div className="timeline-item">
     <div className="inner">
-      <div className="date">
-        {/*<div className="month">Nov</div> */}
-        {/* <div className="year">2022</div>*/}
-      </div>
+      <div className="date"></div>
       <h2>{header}</h2>
       <img className="timeline-image" src={imagePath} />
       <p className="standard-text">{text}</p>
